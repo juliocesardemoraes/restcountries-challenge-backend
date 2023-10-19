@@ -1,4 +1,4 @@
-# restcountries-challenge-backend
+# Restcountries-challenge-backend
 This is a backend for a challenge
 
 # How to run it?
