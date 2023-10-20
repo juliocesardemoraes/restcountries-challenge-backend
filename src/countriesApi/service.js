@@ -5,13 +5,16 @@ const buscarPais = async (pais) => {
 
   try {
     const response = await axios.get(
-      `https://restcountries.com/v3.1/name/${pais}`
+      `https://restcountries.com.br/v3.1/name/${pais}`
     );
 
-    console.log(response.data);
     return response.data;
   } catch (error) {
-    console.error(error);
+    return {
+      error: "Erro na api",
+      errorCause: error,
+      errorStatus: error.response?.data?.status || 500,
+    };
   }
 };
 
