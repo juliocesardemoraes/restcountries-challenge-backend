@@ -4,11 +4,7 @@ const app = express();
 const cors = require("cors");
 
 app.use(router);
-app.use(
-  cors({
-    exposedHeaders: ["X-Total-Count"],
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 app.listen(3000);
